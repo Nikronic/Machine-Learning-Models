@@ -5,6 +5,9 @@ Created on Thu Aug 16 23:14:59 2018
 @author: Mohammad Doosti Lakhani
 """
 
+"""############################## based on assignment, we do not include Gender  ########################"""
+
+
 # imporing libraries
 import numpy as np
 import matplotlib.pyplot as plt
