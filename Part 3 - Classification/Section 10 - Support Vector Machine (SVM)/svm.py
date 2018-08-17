@@ -30,6 +30,22 @@ from sklearn.svm import SVC
 classifier = SVC(kernel='rbf', random_state=0)
 classifier = classifier.fit(x_train,y_train)
 
+""" Try to uncomment below code and see the visualization output (Try different kernels)"""
+
+"""
+
+classifier = SVC(kernel='poly', degree = 3, random_state=0)
+classifier = classifier.fit(x_train,y_train)
+
+classifier = SVC(kernel='linear', random_state=0) ##  (Equals to SVR)
+classifier = classifier.fit(x_train,y_train) 
+
+classifier = SVC(kernel='sigmoid', random_state=0)
+classifier = classifier.fit(x_train,y_train)
+
+"""
+
+
 # Make the prediction on train set
 y_train_pred = classifier.predict(x_train)
 
