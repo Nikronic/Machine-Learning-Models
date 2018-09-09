@@ -68,6 +68,6 @@ def capcurve(y_values, y_preds_proba,title_of_chart):
 
 def accuracy_on_cm(confusion_matrix):
     t = np.trace(confusion_matrix)
-    f = np.trace(np.fliplr(confusion_matrix))
+    f = np.sum(confusion_matrix) - t
     ac = t/(t+f)
     return (t,f,ac)
