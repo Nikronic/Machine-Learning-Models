@@ -102,3 +102,25 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+base-directory-tree/.babelrc
+base-directory-tree/.postcssrc
+base-directory-tree/LICENSE
+base-directory-tree/package.json
+base-directory-tree/public/favicon.ico
+base-directory-tree/public/index.html
+base-directory-tree/README.md
+base-directory-tree/src/App.vue
+base-directory-tree/src/assets/logo.png
+base-directory-tree/src/components/AppArrow.vue
+base-directory-tree/src/components/AppDarkmode.vue
+base-directory-tree/src/components/AppItem.vue
+base-directory-tree/src/components/AppLightmode.vue
+base-directory-tree/src/components/AppMoreinfo.vue
+base-directory-tree/src/components/AppNav.vue
+base-directory-tree/src/components/AppNote.vue
+base-directory-tree/src/components/AppToggle.vue
+base-directory-tree/src/main.js
+base-directory-tree/src/name.js
+base-directory-tree/src/store.js
+base-directory-tree/src/tree.js
+base-directory-tree/yarn.lock
