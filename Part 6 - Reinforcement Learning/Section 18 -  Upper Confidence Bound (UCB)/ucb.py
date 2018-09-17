@@ -37,3 +37,7 @@ for i in range(0,m):
     reward = dataset.values[i,max_index]
     R[max_index] += reward
     total_reward+= reward
+
+# Visualizing selections
+plt.hist(ad_selected)
+plt.show()    
