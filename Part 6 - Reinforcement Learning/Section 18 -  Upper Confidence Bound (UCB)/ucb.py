@@ -28,7 +28,6 @@ total_reward =0
 # implementation in vectorized form
 for i in range(0,m):
     max_index = 0
-    max_upper_bound = 0
     r = R / N
     delta = np.sqrt(3/2 * math.log(i + 1) / N)
     upper_bound = r + delta
