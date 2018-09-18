@@ -41,17 +41,19 @@ from sklearn.metrics import confusion_matrix
 cm_train = confusion_matrix(y_train,y_train_pred)
 cm_test = confusion_matrix(y_test,y_test_pred)
 
-# Function for acurracy
-def acc(confusion_matrix):
-    t = confusion_matrix[0][0] + confusion_matrix[1][1]
-    f = confusion_matrix[0][1] + confusion_matrix[1][0]
-    ac = t/(t+f)
-    return (t,f,ac)
 
-t_train,f_train,acc_train = acc(cm_train)
+import os
+import sys
+
+scriptpath = "../../Tools" # functions of acc and CAP
+# Add the directory containing your module to the Python path
+sys.path.append(os.path.abspath(scriptpath))
+import accuracy as ac
+
+t_train,f_train,acc_train = ac.accuracy_on_cm(cm_train)
 print('Train status = #{} True, #{} False, %{} Accuracy'.format(t_train,f_train,acc_train*100))
 
-t_test,f_test,acc_test = acc(cm_test)
+t_test,f_test,acc_test = ac.accuracy_on_cm(cm_test)
 print('Test status = #{} True, #{} False, %{} Accuracy'.format(t_test,f_test,acc_test*100))
       
       
