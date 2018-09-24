@@ -124,3 +124,5 @@ base-directory-tree/src/name.js
 base-directory-tree/src/store.js
 base-directory-tree/src/tree.js
 base-directory-tree/yarn.lock
+
+*.jpg
