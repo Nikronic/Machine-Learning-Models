@@ -25,6 +25,8 @@ x = standardscaler_x.transform(x)
 from sklearn.decomposition import PCA
 pca = PCA(n_components=2)
 x_pca =pca.fit_transform(x)
+enough_components = np.sum(pca.explained_variance_ratio_) > 0.4 # if True, 2 components is enough.
+# The condition is problem dependent but more than 40% if very good.
 
 
 # Splitting dataset into Train set and Test set
