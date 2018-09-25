@@ -67,3 +67,6 @@ print('Train status = #{} True, #{} False, %{} Accuracy'.format(t_train,f_train,
 
 t_test,f_test,acc_test = ac.accuracy_on_cm(cm_test)
 print('Test status = #{} True, #{} False, %{} Accuracy'.format(t_test,f_test,acc_test*100))
+      
+      # For educational purpose, I didn't added PCA to reduce dimensions to plot. But if you
+      #     like to do this, see the Part 9 and use lr.py visualization code to plot.
