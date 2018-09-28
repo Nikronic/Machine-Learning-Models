@@ -39,7 +39,19 @@ acc_train = accs_train.mean()
 acc_test = accs_test.mean()
 print('Train status =  %{} Accuracy'.format(acc_train*100))
 print('Test status =  %{} Accuracy'.format(acc_test*100))
-      
+
+
+# Applying GridSearch to find best parameters
+from sklearn.model_selection import GridSearchCV
+parameters = [{ 'criterion' : ['gini'], 'splitter':['best','random'], 'min_samples_split':[0.1,0.2,0.3,0.4,0.5], 
+               'min_samples_leaf': [1,2,3,4,5]},
+              {'criterion' : ['entropy'], 'splitter':['best','random'], 'min_samples_split':[0.1,0.2,0.3,0.4,0.5],
+               'min_samples_leaf': [1,2,3,4,5]} ]
+gridsearch = GridSearchCV(estimator = classifier, param_grid = parameters,refit= False, scoring='accuracy', cv=10)
+gridsearch = gridsearch.fit(x,y)
+optimal_accuracy = gridsearch.best_score_
+optimal_parameters = gridsearch.best_params_
+
      
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap
