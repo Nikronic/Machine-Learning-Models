@@ -52,6 +52,11 @@ gridsearch = gridsearch.fit(x,y)
 optimal_accuracy = gridsearch.best_score_
 optimal_parameters = gridsearch.best_params_
 
+# Train model using optimal parameters optained by GridSearch
+classifier = DecisionTreeClassifier(random_state=0, presort=True, criterion='entropy', splitter='best',
+                                    min_samples_leaf=1 , min_samples_split=0.1)
+classifier = classifier.fit(x_train,y_train)
+
      
 # Visualising the Training set results
 from matplotlib.colors import ListedColormap
